@@ -1,0 +1,116 @@
+/* Đặt lại một số thuộc tính mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    > .mri{
+        width: 380px;
+        height: 50vh;
+        padding: 30px;
+        background-color: white;
+        border-radius: 2px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        >form{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.un, .pn {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"],input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+#erop {
+    color: red;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.qupa {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.qupa a {
+    color: rgb(104, 207, 0);
+    text-decoration: none;
+}
+
+.qupa a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: darkgreen;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green;
+}
+
+button:focus {
+    outline: none;
+}

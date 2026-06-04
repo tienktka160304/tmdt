@@ -1,0 +1,558 @@
+.subtable_tr {
+  transition: background-color 0.3s ease;
+}
+.ngat_hang {
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+.locked {
+  background-color: #f0eefd;
+  opacity: 0.5;
+}
+.grid-userad > .usad {
+  align-self: center;
+}
+
+.name-user {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  > div.left img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  > .right {
+    display: block;
+    font-size: 14px;
+    > .right-tren {
+      color: #23272e;
+    }
+    > .right-duoi {
+      color: #8b909a;
+      text-wrap: wrap;
+    }
+  }
+}
+
+.ct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #23272e;
+}
+.h1-key {
+  display: flex;
+  padding: 30px 0px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+
+  > h1 {
+    font-size: 36px;
+  }
+
+  > .rong {
+    flex-grow: 1;
+  }
+
+  > form {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.boxuser {
+  background-color: #ffffff;
+
+  > hr {
+    background-color: #dbdade;
+    border: none;
+    height: 1px;
+  }
+}
+
+.box-us1 {
+  display: flex;
+  padding: 5px 50px;
+  min-height: 150px;
+  gap: 1%;
+  > .box-us1-1 {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #dbdade;
+    > .left > img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    > .right {
+      display: block;
+      padding: 0px 10px;
+
+      > .right-name {
+        color: #23272e;
+        font-size: 18px;
+      }
+
+      > .right-email {
+        font-size: 18px;
+        color: #8b909a;
+      }
+    }
+  }
+  > .box-us1-2 > span,
+  .box-us1-3 > span {
+    color: black;
+    padding-bottom: 10px;
+    font-weight: 600;
+  }
+  > .box-us1-2 {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    justify-content: space-evenly;
+    border-right: 1px solid #dbdade;
+
+    > .box-us {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      > .box-us {
+        min-width: 120px;
+      }
+    }
+  }
+
+  > .box-us1-3 {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    font-size: 16px;
+    justify-content: space-evenly;
+    gap: 10px;
+
+    > .box-order-3 {
+      display: flex;
+      justify-content: space-between;
+
+      gap: 10px;
+      > div {
+        justify-self: center;
+      }
+      > div span {
+        font-size: 13px;
+        color: #8b909a;
+      }
+    }
+  }
+}
+
+.box2-us > ul {
+  display: flex;
+  gap: 10px;
+  padding: 0px 0px 5px 40px;
+
+  > li {
+    width: 100px;
+    height: 50px;
+
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    > a.active {
+      color: #1dac6b;
+      border-bottom: 2px solid #1dac6b;
+    }
+  }
+}
+
+.actions-d {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.actions-d a,
+.actions-d button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 5px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  gap: 5px;
+  p {
+    font-size: 12px;
+  }
+}
+.actions-d a:hover {
+  opacity: 0.8;
+}
+.actions-d button {
+  background-color: transparent;
+}
+.actions-d button:hover {
+  opacity: 0.8;
+}
+.actions-d button .bg {
+  background-color: red;
+  color: #3a3a3a;
+}
+.actions-d a p,
+.actions-d button p {
+  display: none;
+}
+
+.actions-d a:hover p,
+.actions-d button:hover p {
+  display: block;
+}
+
+/* bảng đơn hàng của user */
+.grid-donhang {
+  display: flex;
+  flex-direction: column;
+  > .grid-rowdh,
+  .subgrid-row {
+    font-size: 14px;
+  }
+  > .grid-rowdh {
+    .status-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .left-action,
+    .right-action {
+      display: flex;
+      justify-content: center;
+      > button {
+        padding: 2px 5px;
+        font-size: 12;
+        background-color: transparent;
+        border-radius: 4px;
+      }
+      > button:hover {
+        background-color: rgb(220, 220, 220);
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+
+    .center-status {
+      text-align: center;
+    }
+  }
+
+  > .grid-tieudedh,
+  .grid-rowdh {
+    > .bot-icon {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    > .left {
+      display: flex;
+      justify-content: left;
+    }
+
+    > .bot-icon > i {
+      font-size: 14px;
+      width: 15px;
+      height: 15px;
+      background-color: var(--color-green);
+      border-radius: 50%;
+      color: #ffffff;
+      opacity: 0.6;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    > .bot-icon.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      > i {
+        background-color: var(--color-red);
+        opacity: 1;
+      }
+    }
+  }
+
+  > .th_donhang,
+  .detail_donhang {
+    display: none;
+  }
+
+  > .th_donhang.hien,
+  .detail_donhang.hien {
+    display: grid;
+  }
+
+  > .modonhang-user.active {
+    background-color: #f2f4f6;
+    border: none;
+  }
+
+  > .an-dh {
+    display: none;
+  }
+
+  > .chitiet_donhang {
+    /* padding: 10px 20px; */
+    padding-top: 10px;
+    > .ct-dh {
+      padding: 5px 10px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+
+.left {
+  text-align: left;
+}
+
+/* bảng user_review */
+
+/* thanh tìm kiếm */
+.sr-container input[type="text"] {
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  height: 20px;
+  width: 300px;
+}
+
+.sr-container:hover {
+  border: #4caf50 solid 1px;
+}
+
+.sr-container:focus-within {
+  border: #4caf50 solid 1px;
+}
+
+/* điều chỉnh lại height của input */
+.sr-container {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #e9e7fe;
+  padding: 5px 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.sr-container i {
+  color: #818181;
+}
+
+/* end */
+/* màu */
+.fle {
+  display: flex;
+}
+
+.gr {
+  color: var(--color-green);
+}
+
+.red {
+  color: var(--color-red);
+}
+
+.vang {
+  color: var(--color-vang);
+}
+
+.blue {
+  color: var(--color-bule);
+}
+
+.cen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* boder màu */
+.border-green {
+  color: var(--color-green);
+  border: 1px solid var(--color-green);
+}
+
+.border-red {
+  color: var(--color-red);
+  border: 1px solid var(--color-red);
+}
+
+.border-blue {
+  color: var(--color-bule);
+  border: 1px solid var(--color-bule);
+}
+
+.border-yellow {
+  color: var(--color-vang);
+  border: 1px solid var(--color-vang);
+}
+
+/* phantrang */
+.end-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+
+  > .left {
+    > form.show-sl {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      > label {
+        color: #8b909a;
+        min-width: 70px;
+      }
+
+      > select {
+        color: #23272e;
+        display: flex;
+        padding: 5px;
+        margin: 0;
+        font-size: 12px;
+        height: 30px;
+      }
+    }
+  }
+
+  > .right {
+    margin-top: 20px;
+    padding-bottom: 10px;
+
+    > ul {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    > ul > li {
+      /* background-color: #ececec; */
+      display: block;
+      gap: 5px;
+      border-radius: 2px;
+    }
+
+    > ul > li > a {
+      display: block;
+      padding: 5px 10px;
+      color: #575478;
+    }
+
+    > ul > li.active {
+      background-color: #eae8fd;
+
+      > a {
+        color: #9a91f6;
+      }
+    }
+
+    > ul > li:hover {
+      background-color: #eae8fd;
+
+      > a {
+        color: #9a91f6;
+      }
+    }
+  }
+}
+
+/* donhang */
+.donhang {
+  background-color: #ffffff;
+
+  > .th_donhang > ul {
+    display: flex;
+    gap: 10px;
+
+    > li {
+      width: 100px;
+      height: 50px;
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      > a.active {
+        color: #1dac6b;
+        border-bottom: 2px solid #1dac6b;
+      }
+    }
+  }
+}
+
+.ct-note {
+  padding: 5px 10px 20px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #8b909a;
+}
+
+.capquyen_user{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.capquyen_user > form > button{
+  background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 10px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    gap: 5px;
+  }
+  .capquyen_user > form > button:hover{
+    background-color: rgba(0, 255, 38, 0.537);
+    }
