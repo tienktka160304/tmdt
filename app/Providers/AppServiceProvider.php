@@ -28,6 +28,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if (app()->environment('production')) {
+            URL::forceScheme('https');
+        }
         // 1. Log SQL Query để debug (Chỉ chạy khi bật debug trong .env)
         if (config('app.debug')) {
             DB::listen(function ($query) {
@@ -62,16 +65,16 @@ class AppServiceProvider extends ServiceProvider
             $OrderCount = Cache::remember('admin_order_count_pending', 600, function () {
                 return Order::where('status', 1)->where('thanh_toan', 1)->count();
             });
-            
+
             View::share('OrderCount', $OrderCount);
-            
+
         } catch (\Exception $e) {
             // Ghi lại lỗi chi tiết vào file storage/logs/laravel.log
             Log::error('Lỗi khi đếm OrderCount ở AppServiceProvider: ' . $e->getMessage(), [
                 'file' => $e->getFile(),
                 'line' => $e->getLine()
             ]);
-            
+
             // Gán tạm = 0 để giao diện web vẫn load bình thường
             View::share('OrderCount', 0);
         }
